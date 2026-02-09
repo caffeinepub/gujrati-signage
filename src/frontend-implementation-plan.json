@@ -1,375 +1,109 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Gujrati Signage — Premium 3D single-page marketing site with intro helper",
+  "title": "Marketing site polish: white wordmark, email fix, new services images, and nav hover details",
   "requirements": [
     {
-      "id": "REQ-1",
-      "summary": "Implement premium minimal responsive visual system (palette, typography, spacing) conveying legacy, trust, and innovation.",
+      "id": "REQ-28",
+      "summary": "Replace gradient wordmark styling with a plain white premium text treatment that stays readable across header/footer states and themes.",
       "acceptanceCriteria": [
-        "All key pages/sections render correctly on mobile, tablet, and desktop without horizontal overflow.",
-        "Typography uses strong headline styling and readable body text with a premium minimal aesthetic.",
-        "Overall palette adheres to black/white/silver/neutrals with restrained accent usage (no flashy colors dominating)."
+        "The Wordmark component no longer uses golden/metallic gradient text styling and renders the text as plain white.",
+        "The wordmark is readable in the header (transparent state and scrolled state) and in the footer in both light and dark themes.",
+        "No logo image is reintroduced; the branding remains text-only as “Gujrati signage”."
       ],
       "file_operations": [
         {
-          "path": "frontend/src/index.css",
-          "operation": "create",
-          "description": "Create global styling entry with Tailwind directives plus premium palette tokens (black/white/metallic-silver/soft neutrals), typography defaults, section spacing, and safe motion defaults (reduced-motion)."
-        },
-        {
-          "path": "frontend/tailwind.config.js",
+          "path": "frontend/src/components/marketing/Wordmark.tsx",
           "operation": "modify",
-          "description": "Extend Tailwind theme to support premium typography scale, neutral/silver accent utilities, and animation primitives used across sections."
-        },
-        {
-          "path": "frontend/src/components/marketing/SiteLayout.tsx",
-          "operation": "create",
-          "description": "Create a responsive layout wrapper (max widths, padding, balanced whitespace) and shared visual treatments for light/dark section blocks."
-        }
-      ]
-    },
-    {
-      "id": "REQ-2",
-      "summary": "Build single-page section structure with smooth in-page navigation, cinematic transitions/parallax feel, and performant micro-animations.",
-      "acceptanceCriteria": [
-        "Navigation (header links or in-page anchors) can scroll to each section smoothly.",
-        "Each section has subtle motion/transition that remains performant and does not block scrolling.",
-        "A mix of light and dark section backgrounds is used to create depth (especially around the gallery/showcase area)."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/pages/MarketingLanding.tsx",
-          "operation": "create",
-          "description": "Create the single-page landing view that composes Hero, About, Services, Gallery, Why Choose Us, and Contact sections with semantic section anchors/IDs and alternating light/dark depth blocks."
-        },
-        {
-          "path": "frontend/src/components/marketing/HeaderNav.tsx",
-          "operation": "create",
-          "description": "Create a sticky header with in-page anchor links that smooth-scroll to each section; use shadcn-ui components (e.g., Button/Sheet) for accessible navigation. Verify the component's usage instructions before implementing."
-        },
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "create",
-          "description": "Wire the marketing landing page into the app as the primary view, including header navigation and the section composition so there are no orphan sections."
-        }
-      ]
-    },
-    {
-      "id": "REQ-3",
-      "summary": "Implement the Hero with exact headline, two CTAs, scroll cue, and animated 3D signage/light-board visual.",
-      "acceptanceCriteria": [
-        "Hero displays the exact headline text and two CTAs.",
-        "“Contact Us” CTA scrolls to the Contact section; “View Our Work” scrolls to the Gallery/Showcase section.",
-        "Hero contains an animated 3D element with soft lighting/shadows/reflections consistent with the premium aesthetic."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/marketing/HeroSection.tsx",
-          "operation": "create",
-          "description": "Create Hero section with headline “Crafting Signage Excellence Since 1960”, CTAs, scroll cue, and an animated 3D hero visual using the generated assets and subtle motion; use shadcn-ui Button for CTAs. Verify the component's usage instructions before implementing."
-        },
-        {
-          "path": "frontend/src/pages/MarketingLanding.tsx",
-          "operation": "modify",
-          "description": "Add Hero section at top and wire CTA click handlers to smooth-scroll to #contact and #work."
-        },
-        {
-          "path": "frontend/public/assets/generated/hero-backdrop.dim_1920x1080.png",
-          "operation": "create",
-          "description": "Add generated static asset for the hero background: frontend/public/assets/generated/hero-backdrop.dim_1920x1080.png."
-        },
-        {
-          "path": "frontend/public/assets/generated/hero-signage-3d.dim_1400x900.png",
-          "operation": "create",
-          "description": "Add generated static asset for the hero 3D signage element: frontend/public/assets/generated/hero-signage-3d.dim_1400x900.png."
-        }
-      ]
-    },
-    {
-      "id": "REQ-4",
-      "summary": "Add first-load intro: animated phone UI + helper avatar asking “How can I help you?” with quick actions and dismiss/skip.",
-      "acceptanceCriteria": [
-        "On first load, a phone pop-up animation plays and the helper character appears with the text “How can I help you?” (English).",
-        "The intro provides at least 3 quick actions that navigate to relevant sections and a visible dismiss/skip control.",
-        "If dismissed, the user can continue using the site normally; the intro does not block access to content."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/marketing/IntroHelperOverlay.tsx",
-          "operation": "create",
-          "description": "Create an intro overlay/modal that animates a phone frame + helper avatar, shows “How can I help you?” and quick actions (Contact/Services/View Work) plus a dismiss/skip control; use shadcn-ui Dialog and Button for accessibility. Verify the component's usage instructions before implementing."
-        },
-        {
-          "path": "frontend/src/hooks/useIntroDismissed.ts",
-          "operation": "create",
-          "description": "Add a small hook that stores intro dismissed state (e.g., localStorage) so it only shows on first load unless cleared."
-        },
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Mount IntroHelperOverlay at app start and wire quick actions to smooth-scroll to #contact, #services, and #work without blocking page access after dismissal."
-        },
-        {
-          "path": "frontend/public/assets/generated/intro-phone.dim_900x1200.png",
-          "operation": "create",
-          "description": "Add generated static asset for the intro phone UI: frontend/public/assets/generated/intro-phone.dim_900x1200.png."
-        },
-        {
-          "path": "frontend/public/assets/generated/helper-avatar.dim_1024x1024.png",
-          "operation": "create",
-          "description": "Add generated static asset for the helper avatar: frontend/public/assets/generated/helper-avatar.dim_1024x1024.png."
-        }
-      ]
-    },
-    {
-      "id": "REQ-5",
-      "summary": "Implement About Us section with concise legacy/craft/trust copy (Established in 1960) and subtle text reveal animations.",
-      "acceptanceCriteria": [
-        "About section explicitly mentions “Established in 1960” and communicates legacy/trust/craftsmanship in concise premium copy.",
-        "Text reveal/scroll animations are subtle and do not cause layout shift."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/marketing/AboutSection.tsx",
-          "operation": "create",
-          "description": "Create About Us section with premium copy emphasizing “Established in 1960”, experience, precision, and long-term trust, including subtle reveal animations that avoid layout shift."
-        },
-        {
-          "path": "frontend/src/pages/MarketingLanding.tsx",
-          "operation": "modify",
-          "description": "Wire About section into the single-page structure with a semantic section wrapper and in-page anchor."
-        }
-      ]
-    },
-    {
-      "id": "REQ-6",
-      "summary": "Implement Our Services as premium interactive 3D service cards for six specified services with accessible interactions.",
-      "acceptanceCriteria": [
-        "All six services are displayed as distinct cards with consistent styling.",
-        "Cards have 3D depth via lighting/shadow/tilt (mouse hover on desktop; subtle press interaction on mobile).",
-        "Cards remain accessible: text readable, focus states visible, and interactions do not depend solely on hover."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/marketing/ServicesSection.tsx",
-          "operation": "create",
-          "description": "Create Services section rendering six premium 3D-tilt cards (Building Signages, Name Plates, Number Plates, Light Boards, Custom Sign Boards, Radium Stickers) using shadcn-ui Card/Button primitives and accessible focus/press interactions. Verify the component's usage instructions before implementing."
-        },
-        {
-          "path": "frontend/src/pages/MarketingLanding.tsx",
-          "operation": "modify",
-          "description": "Wire Services section into the page with id #services and ensure navigation/intro quick action can scroll to it."
-        },
-        {
-          "path": "frontend/public/assets/generated/service-building-signages.dim_1200x800.png",
-          "operation": "create",
-          "description": "Add generated static asset for services: frontend/public/assets/generated/service-building-signages.dim_1200x800.png."
-        },
-        {
-          "path": "frontend/public/assets/generated/service-name-plates.dim_1200x800.png",
-          "operation": "create",
-          "description": "Add generated static asset for services: frontend/public/assets/generated/service-name-plates.dim_1200x800.png."
-        },
-        {
-          "path": "frontend/public/assets/generated/service-number-plates.dim_1200x800.png",
-          "operation": "create",
-          "description": "Add generated static asset for services: frontend/public/assets/generated/service-number-plates.dim_1200x800.png."
-        },
-        {
-          "path": "frontend/public/assets/generated/service-light-boards.dim_1200x800.png",
-          "operation": "create",
-          "description": "Add generated static asset for services: frontend/public/assets/generated/service-light-boards.dim_1200x800.png."
-        },
-        {
-          "path": "frontend/public/assets/generated/service-custom-sign-boards.dim_1200x800.png",
-          "operation": "create",
-          "description": "Add generated static asset for services: frontend/public/assets/generated/service-custom-sign-boards.dim_1200x800.png."
-        },
-        {
-          "path": "frontend/public/assets/generated/service-radium-stickers.dim_1200x800.png",
-          "operation": "create",
-          "description": "Add generated static asset for services: frontend/public/assets/generated/service-radium-stickers.dim_1200x800.png."
-        }
-      ]
-    },
-    {
-      "id": "REQ-7",
-      "summary": "Create Work Showcase/Gallery with high-quality visuals, smooth transitions, and immersive scrolling consistent with the premium look.",
-      "acceptanceCriteria": [
-        "Gallery displays a grid or cinematic carousel with multiple images and smooth transitions.",
-        "Images are optimized for web (reasonable file size) and use proper responsive sizing.",
-        "Section visually alternates or blends light/dark backgrounds to add depth without reducing readability."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/marketing/GallerySection.tsx",
-          "operation": "create",
-          "description": "Create a premium gallery section (grid + optional cinematic lightbox/carousel feel) with smooth transitions; use shadcn-ui Dialog for an accessible image viewer when images are opened. Verify the component's usage instructions before implementing."
-        },
-        {
-          "path": "frontend/src/pages/MarketingLanding.tsx",
-          "operation": "modify",
-          "description": "Wire Gallery section into the page with id #work and ensure the section uses a darker/contrasting background block to add depth."
-        },
-        {
-          "path": "frontend/public/assets/generated/gallery-01.dim_1600x1000.png",
-          "operation": "create",
-          "description": "Add generated gallery static asset: frontend/public/assets/generated/gallery-01.dim_1600x1000.png."
-        },
-        {
-          "path": "frontend/public/assets/generated/gallery-02.dim_1600x1000.png",
-          "operation": "create",
-          "description": "Add generated gallery static asset: frontend/public/assets/generated/gallery-02.dim_1600x1000.png."
-        },
-        {
-          "path": "frontend/public/assets/generated/gallery-03.dim_1600x1000.png",
-          "operation": "create",
-          "description": "Add generated gallery static asset: frontend/public/assets/generated/gallery-03.dim_1600x1000.png."
-        },
-        {
-          "path": "frontend/public/assets/generated/gallery-04.dim_1600x1000.png",
-          "operation": "create",
-          "description": "Add generated gallery static asset: frontend/public/assets/generated/gallery-04.dim_1600x1000.png."
-        }
-      ]
-    },
-    {
-      "id": "REQ-8",
-      "summary": "Implement Why Choose Us section with four reasons, minimal metallic icons, and subtle animations.",
-      "acceptanceCriteria": [
-        "All four reasons appear with minimal icons and subtle motion (e.g., small hover/scroll reveal).",
-        "Layout is clean and consistent with premium minimal UI and whitespace."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/marketing/WhyChooseUsSection.tsx",
-          "operation": "create",
-          "description": "Create Why Choose Us section listing the four required reasons with minimal metallic icons and subtle reveal/hover motion; use accessible markup and consistent spacing."
+          "description": "Remove the gradient text/transparent clip styling and update Wordmark to render as plain white text with a premium font treatment (e.g., display font family, refined tracking/weight) plus a subtle shadow/outline treatment to ensure readability on both light and dark backgrounds and in both transparent/scrolled header contexts."
         },
         {
           "path": "frontend/src/index.css",
           "operation": "modify",
-          "description": "Add styling helpers to render and position the 4-icon metallic sprite (icon sizing, background positioning, and high-contrast behavior for light/dark sections)."
-        },
-        {
-          "path": "frontend/src/pages/MarketingLanding.tsx",
-          "operation": "modify",
-          "description": "Wire Why Choose Us section into the single-page layout with a semantic section wrapper."
-        },
-        {
-          "path": "frontend/public/assets/generated/why-icons-sprite.dim_1024x1024.png",
-          "operation": "create",
-          "description": "Add generated static asset for icon sprite: frontend/public/assets/generated/why-icons-sprite.dim_1024x1024.png."
+          "description": "Add/adjust a reusable premium wordmark utility (e.g., text shadow/contrast helper) to keep the plain white wordmark readable against light backgrounds while preserving a clean, premium look."
         }
       ]
     },
     {
-      "id": "REQ-9",
-      "summary": "Build Contact section with exact contact details, click-to-call, mailto, and social links with refined hover effects.",
+      "id": "REQ-29",
+      "summary": "Update all displayed contact email text and mailto links to vikrantpatel77.vp@gmail.com throughout the marketing site.",
       "acceptanceCriteria": [
-        "Phone numbers are clickable (tel: links) and visually presented as buttons or prominent links.",
-        "Email is clickable (mailto:) and displayed clearly.",
-        "Instagram and Facebook links open in a new tab and have refined hover/focus states.",
-        "All contact info matches the provided values exactly."
+        "The Contact section email button uses href=\"mailto:vikrantpatel77.vp@gmail.com\".",
+        "The visible email text reads exactly “vikrantpatel77.vp@gmail.com”.",
+        "No instances of the old/typo email remain in the frontend codebase (including footer or other sections if present)."
       ],
       "file_operations": [
         {
           "path": "frontend/src/components/marketing/ContactSection.tsx",
+          "operation": "modify",
+          "description": "Replace the current email address (both visible text and mailto link) with exactly vikrantpatel77.vp@gmail.com."
+        },
+        {
+          "path": "frontend/src/components/marketing/Footer.tsx",
+          "operation": "modify",
+          "description": "Audit and update any displayed email or mailto link in the footer (if present now or introduced by prior edits) to exactly vikrantpatel77.vp@gmail.com; ensure no stale/typo email remains."
+        }
+      ]
+    },
+    {
+      "id": "REQ-30",
+      "summary": "Add five new image-based service cards (Hospital Boards, Reception Boards, Steel Letters, Neon Signs, Glow Sign Boards) matching existing Services layout, hover, and reveal interactions.",
+      "acceptanceCriteria": [
+        "The Services section displays service cards for: Hospital Boards, Reception Boards, Steel Letters, Neon Signs, Glow Sign Boards.",
+        "Each of the above service cards includes an image (static asset) and an English description.",
+        "The new cards match the existing Services section styling (grid layout, hover interactions, and scroll-reveal animation)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/service-hospital-boards.dim_1200x800.png",
           "operation": "create",
-          "description": "Create Contact section with elegant layout showing Phone (9828939660, 9828054199), Email (vikratpatell77.vp@gmail.com), and social links (Instagram/Facebook) using shadcn-ui Button for prominent actions and refined hover/focus states. Verify the component's usage instructions before implementing."
+          "description": "Add the generated static asset at frontend/public/assets/generated/service-hospital-boards.dim_1200x800.png and ensure it is referenced by the new “Hospital Boards” service card."
         },
         {
-          "path": "frontend/src/pages/MarketingLanding.tsx",
-          "operation": "modify",
-          "description": "Wire Contact section into the page with id #contact so CTAs and intro actions can scroll to it."
-        }
-      ]
-    },
-    {
-      "id": "REQ-10",
-      "summary": "Add SEO-friendly semantic structure, heading hierarchy, meta title/description, and accessible image alt text.",
-      "acceptanceCriteria": [
-        "Heading hierarchy is logical (single H1, section H2s, etc.).",
-        "Page has a descriptive title and meta description referencing Gujrati Signage and “Since 1960”.",
-        "All meaningful images have non-empty alt text; decorative images are marked appropriately."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/index.html",
-          "operation": "modify",
-          "description": "Update document title and add a meta description referencing “Gujrati Signage” and “Since 1960”, keeping the page marketing-focused."
-        },
-        {
-          "path": "frontend/src/pages/MarketingLanding.tsx",
-          "operation": "modify",
-          "description": "Ensure semantic sectioning (section/nav/header/footer), a single H1 in the Hero, H2s for each section, and accessible labels for navigation."
-        },
-        {
-          "path": "frontend/src/components/marketing/GallerySection.tsx",
-          "operation": "modify",
-          "description": "Ensure all gallery and service/hero images include appropriate alt text (non-empty for meaningful images; decorative marked appropriately)."
-        }
-      ]
-    },
-    {
-      "id": "REQ-11",
-      "summary": "Use the uploaded WhatsApp image as a brand/logo asset and ensure it stays crisp and legible on light/dark backgrounds.",
-      "acceptanceCriteria": [
-        "The uploaded image is included as a static asset and used as the brand logo in at least one prominent location.",
-        "Logo remains legible on both light and dark surfaces (via layout, background treatment, or subtle shadow/glow)."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/public/assets/brand/whatsapp-logo.jpeg",
+          "path": "frontend/public/assets/generated/service-reception-boards.dim_1200x800.png",
           "operation": "create",
-          "description": "Add the uploaded logo image as a static public asset (source: WhatsApp Image 2026-02-09 at 14.40.31.jpeg) for reuse in header/hero."
+          "description": "Add the generated static asset at frontend/public/assets/generated/service-reception-boards.dim_1200x800.png and ensure it is referenced by the new “Reception Boards” service card."
         },
         {
-          "path": "frontend/src/components/marketing/HeaderNav.tsx",
-          "operation": "modify",
-          "description": "Render the logo prominently in the header and apply a subtle backdrop/halo/shadow treatment so it remains legible on both light and dark section backgrounds."
+          "path": "frontend/public/assets/generated/service-steel-letters.dim_1200x800.png",
+          "operation": "create",
+          "description": "Add the generated static asset at frontend/public/assets/generated/service-steel-letters.dim_1200x800.png and ensure it is referenced by the new “Steel Letters” service card."
         },
         {
-          "path": "frontend/src/components/marketing/HeroSection.tsx",
-          "operation": "modify",
-          "description": "Optionally echo the logo in the hero (or hero lockup) with crisp rendering and contrast-safe treatment."
-        }
-      ]
-    },
-    {
-      "id": "REQ-12",
-      "summary": "Add and render all required generated static images for hero/services/gallery/intro as frontend public assets (no backend image handling).",
-      "acceptanceCriteria": [
-        "All images listed in imageRequirements.required are present as static files and referenced by the UI.",
-        "No backend endpoints are used for serving or generating images at runtime.",
-        "Images match the black/white/silver/neutral premium aesthetic and are used in the intended sections (hero/services/gallery/intro)."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/marketing/HeroSection.tsx",
-          "operation": "modify",
-          "description": "Reference frontend/public/assets/generated/hero-backdrop.dim_1920x1080.png and frontend/public/assets/generated/hero-signage-3d.dim_1400x900.png as static images (no backend), with responsive sizing and performance-minded loading."
+          "path": "frontend/public/assets/generated/service-neon-signs.dim_1200x800.png",
+          "operation": "create",
+          "description": "Add the generated static asset at frontend/public/assets/generated/service-neon-signs.dim_1200x800.png and ensure it is referenced by the new “Neon Signs” service card."
         },
         {
-          "path": "frontend/src/components/marketing/IntroHelperOverlay.tsx",
-          "operation": "modify",
-          "description": "Reference frontend/public/assets/generated/intro-phone.dim_900x1200.png and frontend/public/assets/generated/helper-avatar.dim_1024x1024.png as static images (no backend) and ensure they are sized responsively."
+          "path": "frontend/public/assets/generated/service-glow-sign-boards.dim_1200x800.png",
+          "operation": "create",
+          "description": "Add the generated static asset at frontend/public/assets/generated/service-glow-sign-boards.dim_1200x800.png and ensure it is referenced by the new “Glow Sign Boards” service card."
         },
         {
           "path": "frontend/src/components/marketing/ServicesSection.tsx",
           "operation": "modify",
-          "description": "Reference service images as static assets in each service card: frontend/public/assets/generated/service-building-signages.dim_1200x800.png, frontend/public/assets/generated/service-name-plates.dim_1200x800.png, frontend/public/assets/generated/service-number-plates.dim_1200x800.png, frontend/public/assets/generated/service-light-boards.dim_1200x800.png, frontend/public/assets/generated/service-custom-sign-boards.dim_1200x800.png, frontend/public/assets/generated/service-radium-stickers.dim_1200x800.png."
+          "description": "Extend the services list to include the five new service entries with images (from frontend/public/assets/generated/service-hospital-boards.dim_1200x800.png, frontend/public/assets/generated/service-reception-boards.dim_1200x800.png, frontend/public/assets/generated/service-steel-letters.dim_1200x800.png, frontend/public/assets/generated/service-neon-signs.dim_1200x800.png, frontend/public/assets/generated/service-glow-sign-boards.dim_1200x800.png) and short English descriptions; keep the existing grid layout, hover scaling/3D effect, and IntersectionObserver reveal behavior consistent."
+        }
+      ]
+    },
+    {
+      "id": "REQ-31",
+      "summary": "Add desktop-only header nav hover panels/tooltips with 1–2 lines of section details; keep mobile menu unchanged.",
+      "acceptanceCriteria": [
+        "On desktop, hovering a header nav item shows a small hover panel/tooltip with brief descriptive text for that section.",
+        "The hover details do not block clicking the nav item and do not interfere with smooth-scroll behavior.",
+        "Mobile menu remains a simple tap list without hover UI."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/marketing/HeaderNav.tsx",
+          "operation": "modify",
+          "description": "Implement desktop-only hover detail panels for each top navigation item by associating each nav link with a short description and rendering a premium-styled hover panel/tooltip on hover/focus; ensure the panel does not capture pointer events so clicks still trigger smooth-scroll; keep the existing mobile Sheet menu behavior unchanged."
         },
         {
-          "path": "frontend/src/components/marketing/GallerySection.tsx",
+          "path": "frontend/src/index.css",
           "operation": "modify",
-          "description": "Reference gallery images as static assets with responsive behavior: frontend/public/assets/generated/gallery-01.dim_1600x1000.png, frontend/public/assets/generated/gallery-02.dim_1600x1000.png, frontend/public/assets/generated/gallery-03.dim_1600x1000.png, frontend/public/assets/generated/gallery-04.dim_1600x1000.png."
-        },
-        {
-          "path": "frontend/src/components/marketing/WhyChooseUsSection.tsx",
-          "operation": "modify",
-          "description": "Reference frontend/public/assets/generated/why-icons-sprite.dim_1024x1024.png as the icon source (no backend), ensuring good contrast in both light/dark section variants."
+          "description": "Add/adjust any small utility styles needed for a premium hover panel/tooltip (e.g., subtle border, shadow, backdrop blur) consistent with the site’s existing premium styling, without introducing new routes or editing frontend/src/components/ui."
         }
       ]
     }

@@ -40,11 +40,11 @@ export default function ContactSection() {
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 tracking-tight">
               Get in{' '}
-              <span className="bg-gradient-to-r from-metallic-light via-metallic to-metallic-dark bg-clip-text text-transparent">
+              <span className="heading-gradient">
                 Touch
               </span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-transparent via-metallic to-transparent mx-auto mb-6" />
+            <div className="w-24 h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent mx-auto mb-6" />
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Ready to bring your signage vision to life? Contact us today
             </p>
@@ -58,11 +58,11 @@ export default function ContactSection() {
             }`}
           >
             {/* Phone Numbers */}
-            <Card className="border-border/50 hover:border-metallic/50 transition-all duration-500 hover:shadow-premium-lg">
+            <Card className="border-border/50 hover:border-purple-500/50 transition-all duration-500 hover:shadow-premium-lg">
               <CardContent className="p-6">
                 <div className="flex items-start space-x-4">
-                  <div className="shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-metallic-light/20 to-metallic-dark/20 flex items-center justify-center">
-                    <Phone className="w-6 h-6 text-metallic" />
+                  <div className="shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-purple-500/20 to-purple-600/20 flex items-center justify-center">
+                    <Phone className="w-6 h-6 text-purple-500" />
                   </div>
                   <div className="flex-1">
                     <h3 className="text-lg font-bold mb-3">Call Us</h3>
@@ -70,7 +70,7 @@ export default function ContactSection() {
                       <Button
                         variant="outline"
                         asChild
-                        className="w-full justify-start text-left hover:bg-accent/10 hover:border-metallic/50 transition-all duration-300"
+                        className="w-full justify-start text-left hover:bg-accent/10 hover:border-purple-500/50 transition-all duration-300"
                       >
                         <a href="tel:9828939660">
                           <Phone className="w-4 h-4 mr-2" />
@@ -80,7 +80,7 @@ export default function ContactSection() {
                       <Button
                         variant="outline"
                         asChild
-                        className="w-full justify-start text-left hover:bg-accent/10 hover:border-metallic/50 transition-all duration-300"
+                        className="w-full justify-start text-left hover:bg-accent/10 hover:border-purple-500/50 transition-all duration-300"
                       >
                         <a href="tel:9828054199">
                           <Phone className="w-4 h-4 mr-2" />
@@ -94,22 +94,22 @@ export default function ContactSection() {
             </Card>
 
             {/* Email */}
-            <Card className="border-border/50 hover:border-metallic/50 transition-all duration-500 hover:shadow-premium-lg">
+            <Card className="border-border/50 hover:border-purple-500/50 transition-all duration-500 hover:shadow-premium-lg">
               <CardContent className="p-6">
                 <div className="flex items-start space-x-4">
-                  <div className="shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-metallic-light/20 to-metallic-dark/20 flex items-center justify-center">
-                    <Mail className="w-6 h-6 text-metallic" />
+                  <div className="shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-purple-500/20 to-purple-600/20 flex items-center justify-center">
+                    <Mail className="w-6 h-6 text-purple-500" />
                   </div>
                   <div className="flex-1">
                     <h3 className="text-lg font-bold mb-3">Email Us</h3>
                     <Button
                       variant="outline"
                       asChild
-                      className="w-full justify-start text-left hover:bg-accent/10 hover:border-metallic/50 transition-all duration-300"
+                      className="w-full justify-start text-left hover:bg-accent/10 hover:border-purple-500/50 transition-all duration-300"
                     >
-                      <a href="mailto:vikratpatell77.vp@gmail.com">
+                      <a href="mailto:vikrantpatel77.vp@gmail.com">
                         <Mail className="w-4 h-4 mr-2" />
-                        vikratpatell77.vp@gmail.com
+                        vikrantpatel77.vp@gmail.com
                       </a>
                     </Button>
                   </div>
@@ -130,7 +130,7 @@ export default function ContactSection() {
                 variant="outline"
                 size="lg"
                 asChild
-                className="group hover:bg-accent/10 hover:border-metallic/50 transition-all duration-300"
+                className="group hover:bg-accent/10 hover:border-purple-500/50 transition-all duration-300"
               >
                 <a
                   href="https://www.instagram.com/gujratisignage_"
@@ -138,14 +138,14 @@ export default function ContactSection() {
                   rel="noopener noreferrer"
                   aria-label="Follow us on Instagram"
                 >
-                  <SiInstagram className="w-6 h-6 group-hover:text-metallic transition-colors" />
+                  <SiInstagram className="w-6 h-6 group-hover:text-purple-500 transition-colors" />
                 </a>
               </Button>
               <Button
                 variant="outline"
                 size="lg"
                 asChild
-                className="group hover:bg-accent/10 hover:border-metallic/50 transition-all duration-300"
+                className="group hover:bg-accent/10 hover:border-purple-500/50 transition-all duration-300"
               >
                 <a
                   href="https://www.facebook.com/share/1HjagdkEXW/"
@@ -153,7 +153,7 @@ export default function ContactSection() {
                   rel="noopener noreferrer"
                   aria-label="Follow us on Facebook"
                 >
-                  <SiFacebook className="w-6 h-6 group-hover:text-metallic transition-colors" />
+                  <SiFacebook className="w-6 h-6 group-hover:text-purple-500 transition-colors" />
                 </a>
               </Button>
             </div>

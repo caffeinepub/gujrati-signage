@@ -1,14 +1,23 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 3,
-  "summary": "Design and build a modern premium 3D marketing website for heritage signage company Gujrati Signage (est. 1960) emphasizing legacy, craftsmanship, trust, and innovation, with cinematic scrolling, micro-animations, 3D service cards, gallery, and a custom intro helper interaction.",
+  "projectStateVersion": 13,
+  "summary": "Design and build a modern premium marketing website for heritage signage company Gujrati Signage (est. 1960) emphasizing legacy and trust, with a simplified static first-page/hero (no motion graphics), clear logo presence, prominent credibility stats, expanded products offering, and lead capture/order enquiry flows.",
   "architectural_notes": [
     "Use 3D elements with subtle lighting, reflections, and soft shadows; avoid flashy effects to maintain calm luxury feel.",
-    "Plan for SEO-friendly semantic structure and performance-focused animation approach (smooth scrolling, micro-interactions)."
+    "Plan for SEO-friendly semantic structure and performance-focused animation approach (smooth scrolling, micro-interactions).",
+    "First page/hero should be static/minimal (no motion graphics) while preserving a premium look; prioritize clear logo visibility and readability.",
+    "Hero/first page should have a plain background; use white+purple gradient text styling; remove centered “Gujrati signage” from the hero.",
+    "Remove the “1,000,000+ projects completed” credibility stat from the first page/hero (can remain elsewhere if needed).",
+    "Add an “About the Founders” section with provided narrative + founder quotes, matching the premium minimal layout.",
+    "Apply white-to-purple gradient styling consistently to all headings across the site.",
+    "Replace golden/metallic wordmark styling: “Gujrati signage” should be plain white with a premium font, clearly visible on all backgrounds."
   ],
-  "known_issues": [],
-  "isFixRequest": false,
-  "imageRequirements": "## Required Images\n- Premium abstract hero backdrop with soft gradients, subtle metallic sheen, and gentle vignette (hero-backdrop.dim_1920x1080.png)\n- 3D minimal signage/light-board render with soft reflections and studio lighting (hero-signage-3d.dim_1400x900.png)\n- Modern smartphone frame render on dark background with soft shadow (intro-phone.dim_900x1200.png)\n- 3D cartoon helper avatar illustration, friendly premium style, neutral colors, clean outlines, subtle shading (helper-avatar.dim_1024x1024.png)\n- Minimal metallic icon set (4 icons) with silver/neutral tones, simple geometric style (why-icons-sprite.dim_1024x1024.png)\n- Service image: building signage close-up, premium 3D/photoreal look, neutral palette (service-building-signages.dim_1200x800.png)\n- Service image: name plate premium close-up, neutral palette, soft lighting (service-name-plates.dim_1200x800.png)\n- Service image: number plate premium close-up, neutral palette, soft lighting (service-number-plates.dim_1200x800.png)\n- Service image: light board premium close-up, subtle glow, calm luxury look (service-light-boards.dim_1200x800.png)\n- Service image: custom sign board premium close-up, neutral palette, soft reflections (service-custom-sign-boards.dim_1200x800.png)\n- Service image: radium sticker premium macro/close-up, subtle sheen, neutral palette (service-radium-stickers.dim_1200x800.png)\n- Gallery image 1: premium storefront signage installation at night, tasteful lighting (gallery-01.dim_1600x1000.png)\n- Gallery image 2: premium interior nameplate signage, clean composition (gallery-02.dim_1600x1000.png)\n- Gallery image 3: premium exterior building signage in daylight, minimalist composition (gallery-03.dim_1600x1000.png)\n- Gallery image 4: premium illuminated light board detail shot, soft bokeh (gallery-04.dim_1600x1000.png)",
+  "known_issues": [
+    "Logo image is not visible in the current build; user requested removing it and using golden text instead.",
+    "Contact email appears incorrect/typo in current build; should be vikrantpatel77.vp@gmail.com."
+  ],
+  "isFixRequest": true,
+  "imageRequirements": "## Required Images\n- Premium photo-style image of hospital signage board (service-hospital-boards.dim_1200x800.png)\n- Premium photo-style image of a reception signage board (service-reception-boards.dim_1200x800.png)\n- Premium photo-style image of stainless/steel letters signage (service-steel-letters.dim_1200x800.png)\n- Premium photo-style image of neon sign lettering (service-neon-signs.dim_1200x800.png)\n- Premium photo-style image of an illuminated glow sign board (service-glow-sign-boards.dim_1200x800.png)",
   "existing_features": [
     {
       "id": "feature-create-a-modern-premium-minimal-fully-responsive-marketing-website-for-gujrati-signage-established-1960-that-communicates-legacy-craftsmanship-trust-and-innovation-using-a-black-white-metallic-silver-soft-neutral-palette-with-subtle-accent-highlights-sophisticated-typography-and-balanced-white-space",
@@ -105,6 +114,150 @@
         "REQ-12"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-remove-motion-graphics-animations-from-the-first-page-hero-so-it-is-plain-and-static-while-keeping-the-premium-minimal-layout",
+      "title": "Remove motion graphics/animations from the first page (Hero) so it is plain and static, while keeping the premium minimal layout.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-company-logo-prominently-on-the-first-page-hero-and-ensure-the-header-logo-uses-the-updated-company-logo-asset",
+      "title": "Add the company logo prominently on the first page (Hero) and ensure the header logo uses the updated company logo asset.",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-prominent-credibility-metric-on-the-site-display-1-000-000-projects-completed-as-a-key-stat-including-updating-any-existing-projects-completed-stat",
+      "title": "Add a prominent credibility metric on the site: display “1,000,000+ projects completed” as a key stat (including updating any existing 'Projects Completed' stat).",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-new-products-section-to-the-landing-page-and-include-product-entries-for-hospital-boards-reception-boards-steel-letters-neon-signs-glow-sign-board",
+      "title": "Add a new “Products” section to the landing page and include product entries for: hospital boards, reception boards, steel letters, neon signs, glow sign board.",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-vision-and-mission-content-to-the-site-using-the-exact-user-provided-text-english-formatted-as-a-clear-section-or-subsections-on-the-landing-page",
+      "title": "Add Vision and Mission content to the site using the exact user-provided text (English), formatted as a clear section (or subsections) on the landing page.",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-an-enquiry-flow-provide-an-enquiry-form-that-lets-customers-submit-requirements-name-phone-email-optional-message-requirements-and-shows-a-success-confirmation-after-submission",
+      "title": "Add an enquiry flow: provide an enquiry form that lets customers submit requirements (name, phone, email optional, message/requirements) and shows a success confirmation after submission.",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-an-order-from-website-request-flow-allow-customers-to-place-an-order-request-by-selecting-a-product-and-entering-order-details-name-phone-product-quantity-size-optional-notes-then-persist-it-in-the-backend",
+      "title": "Add an “order from website” request flow: allow customers to place an order/request by selecting a product and entering order details (name, phone, product, quantity/size optional, notes), then persist it in the backend.",
+      "reqIds": [
+        "REQ-19"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-the-logo-image-from-the-marketing-site-ui-and-replace-it-with-a-text-wordmark-that-reads-exactly-gujrati-signage-styled-in-a-premium-golden-metallic-look-ensuring-it-is-clearly-visible-on-all-backgrounds-in-the-header-hero-and-footer",
+      "title": "Remove the logo image from the marketing site UI and replace it with a text wordmark that reads exactly “Gujrati signage” styled in a premium golden/metallic look, ensuring it is clearly visible on all backgrounds in the header, hero, and footer.",
+      "reqIds": [
+        "REQ-21"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-the-products-list-and-products-section-display-all-requested-product-entries-in-english-hospital-boards-reception-boards-steel-letters-neon-signs-and-glow-sign-boards-and-that-ordering-preselection-continues-to-work-for-each-product-card",
+      "title": "Ensure the Products list and Products section display all requested product entries in English: “Hospital Boards”, “Reception Boards”, “Steel Letters”, “Neon Signs”, and “Glow Sign Boards”, and that ordering preselection continues to work for each product card.",
+      "reqIds": [
+        "REQ-22"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-new-payment-section-to-the-marketing-landing-page-and-include-it-in-the-header-navigation-the-section-must-be-reachable-via-an-in-page-anchor-id-payment-and-a-new-payment-nav-link-present-payment-as-an-informational-cta-section-no-real-payment-processing-with-clear-english-headings-and-a-primary-action-that-routes-the-user-to-an-existing-contact-enquiry-order-section-smooth-scroll-match-the-existing-premium-minimal-styling-and-responsive-layout-patterns-used-by-other-sections",
+      "title": "Add a new \"Payment\" section to the marketing landing page and include it in the header navigation.\n\nThe section must:\n- Be reachable via an in-page anchor id=\"payment\" and a new \"Payment\" nav link.\n- Present payment as an informational/CTA section (no real payment processing) with clear English headings and a primary action that routes the user to an existing contact/enquiry/order section (smooth-scroll).\n- Match the existing premium minimal styling and responsive layout patterns used by other sections.",
+      "reqIds": [
+        "REQ-23"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-hero-first-page-to-remove-the-centered-gujrati-signage-wordmark-and-remove-the-1-000-000-projects-completed-stat-from-the-hero-also-update-the-hero-background-to-be-plain-solid-rather-than-using-the-current-background-image-and-background-gradient",
+      "title": "Update the Hero (first page) to remove the centered \"Gujrati signage\" wordmark and remove the \"1,000,000+ Projects Completed\" stat from the Hero.\n\nAlso update the Hero background to be plain (solid) rather than using the current background image and background gradient.",
+      "reqIds": [
+        "REQ-24"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-change-the-hero-gradient-text-styling-to-use-a-white-to-purple-gradient-instead-of-the-current-metallic-gradient-for-the-hero-s-gradient-highlighted-text-e-g-the-since-1960-highlighted-line",
+      "title": "Change the Hero gradient text styling to use a white-to-purple gradient (instead of the current metallic gradient) for the Hero’s gradient-highlighted text (e.g., the \"Since 1960\" highlighted line).",
+      "reqIds": [
+        "REQ-25"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-new-marketing-landing-page-section-titled-the-founders-that-presents-the-user-provided-founders-legacy-journey-quotes-content-in-english-with-a-premium-minimal-layout-consistent-with-existing-sections-and-include-it-in-the-landing-page-flow-and-header-navigation-via-an-in-page-anchor",
+      "title": "Add a new marketing landing-page section titled “The Founders” that presents the user-provided founders/legacy/journey/quotes content in English, with a premium minimal layout consistent with existing sections, and include it in the landing page flow and header navigation via an in-page anchor.",
+      "reqIds": [
+        "REQ-26"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-site-wide-marketing-heading-styling-so-all-headings-use-a-white-to-purple-gradient-replacing-the-current-metallic-gradient-heading-treatment-wherever-it-appears",
+      "title": "Update site-wide marketing heading styling so all headings use a white-to-purple gradient, replacing the current metallic gradient heading treatment wherever it appears.",
+      "reqIds": [
+        "REQ-27"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-site-wordmark-text-gujrati-signage-to-use-a-plain-white-premium-font-treatment-remove-the-current-golden-metallic-gradient-styling-and-ensure-it-remains-clearly-readable-in-the-header-and-footer-across-light-dark-backgrounds-and-scrolled-unscrolled-header-states",
+      "title": "Update the site wordmark text “Gujrati signage” to use a plain white, premium font treatment (remove the current golden/metallic gradient styling) and ensure it remains clearly readable in the header and footer across light/dark backgrounds and scrolled/unscrolled header states.",
+      "reqIds": [
+        "REQ-28"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-displayed-contact-email-address-and-mailto-link-everywhere-it-appears-on-the-marketing-site-to-exactly-vikrantpatel77-vp-gmail-com",
+      "title": "Update the displayed contact email address and mailto link everywhere it appears on the marketing site to exactly: vikrantpatel77.vp@gmail.com.",
+      "reqIds": [
+        "REQ-29"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-extend-the-services-section-to-include-image-based-service-cards-for-the-following-entries-english-names-exactly-as-written-hospital-boards-reception-boards-steel-letters-neon-signs-and-glow-sign-boards-each-new-service-card-must-include-an-image-and-a-short-english-description-consistent-with-the-existing-premium-services-card-layout-and-interactions",
+      "title": "Extend the Services section to include image-based service cards for the following entries (English names exactly as written): “Hospital Boards”, “Reception Boards”, “Steel Letters”, “Neon Signs”, and “Glow Sign Boards”. Each new service card must include an image and a short English description consistent with the existing premium services card layout and interactions.",
+      "reqIds": [
+        "REQ-30"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-desktop-header-navigation-hover-behavior-so-that-when-the-mouse-hovers-over-a-top-navigation-item-e-g-home-about-services-products-etc-a-small-premium-styled-hover-panel-tooltip-appears-showing-brief-section-details-1-2-lines-for-that-nav-item-keep-mobile-navigation-behavior-unchanged",
+      "title": "Add desktop header navigation hover behavior so that when the mouse hovers over a top navigation item (e.g., Home, About, Services, Products, etc.), a small premium-styled hover panel/tooltip appears showing brief section details (1–2 lines) for that nav item; keep mobile navigation behavior unchanged.",
+      "reqIds": [
+        "REQ-31"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -141,6 +294,98 @@
     {
       "id": "AR-6",
       "summary": "Add appropriate images/visual assets for each section (services and work showcase) aligned to premium 3D aesthetic",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Add a prominent credibility metric on the site (e.g., “1,000,000+ projects completed”)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Add an enquiry-type flow (enquiry form/CTA) for customers to submit requirements",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Add a customer ordering capability from the website (product order/request flow)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-11",
+      "summary": "Add/expand a Products section including: hospital boards, reception boards, steel letters, neon signs, glow sign board",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-12",
+      "summary": "Add Vision and Mission content sections using the provided text",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-20",
+      "summary": "Implement backend storage and APIs in the single Motoko actor to support creating and listing enquiries and orders (for basic verification), using stable state so data survives upgrades.",
+      "reqIds": [
+        "REQ-20"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-21",
+      "summary": "Remove/hide the logo image (since it’s not visible) and instead display the text “Gujrati signage” as a golden wordmark on the site (e.g., header/hero)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-22",
+      "summary": "Add a Payment section/option on the website (payment display/CTA)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-23",
+      "summary": "Update first page/hero styling: remove centered “Gujrati signage” text, remove “1,000,000+ projects completed” from first page, use plain background, and change gradient text styling to a white + purple gradient",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-24",
+      "summary": "Add an “About the Founders” section using the provided founders/legacy/journey/quotes content (Vikrant Patel, Vimal Patel, brotherhood of vision, legacy, journey, words from founders, promise forward)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-25",
+      "summary": "Update site-wide heading styles so all headings use a white-to-purple gradient",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-26",
+      "summary": "Change the “Gujrati signage” text wordmark to plain white with a premium font treatment (replace golden/metallic styling)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-27",
+      "summary": "Update contact email to vikrantpatel77.vp@gmail.com (fix any incorrect/typo email currently shown)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-28",
+      "summary": "Add/extend Services section to include image-based service cards for Hospital Boards, Reception Boards, Steel Letters, Neon Signs, Glow Sign Boards",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-29",
+      "summary": "Add header navigation hover behavior: on mouse hover over nav items (e.g., like Home/About), show details via dropdown/hover panel for the relevant section links",
       "reqIds": [],
       "status": "pending"
     }

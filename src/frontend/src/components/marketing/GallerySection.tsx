@@ -57,11 +57,11 @@ export default function GallerySection() {
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 tracking-tight">
               Our{' '}
-              <span className="bg-gradient-to-r from-metallic-light via-metallic to-metallic-dark bg-clip-text text-transparent">
+              <span className="heading-gradient">
                 Work
               </span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-transparent via-metallic to-transparent mx-auto mb-6" />
+            <div className="w-24 h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent mx-auto mb-6" />
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               A showcase of our finest signage installations
             </p>
@@ -82,7 +82,7 @@ export default function GallerySection() {
               <Dialog>
                 <DialogTrigger asChild>
                   <button
-                    className="group relative block w-full overflow-hidden rounded-lg aspect-[16/10] focus:outline-none focus:ring-2 focus:ring-metallic focus:ring-offset-2 focus:ring-offset-background"
+                    className="group relative block w-full overflow-hidden rounded-lg aspect-[16/10] focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-background"
                     onClick={() => setSelectedImage(index)}
                   >
                     <img
@@ -98,7 +98,7 @@ export default function GallerySection() {
                     </div>
                   </button>
                 </DialogTrigger>
-                <DialogContent className="max-w-7xl w-full p-0 bg-background/95 backdrop-blur-md border-metallic/20">
+                <DialogContent className="max-w-7xl w-full p-0 bg-background/95 backdrop-blur-md border-purple-500/20">
                   <div className="relative">
                     <img
                       src={image.src}

@@ -29,139 +29,137 @@
         --metallic-light: 0.85 0.01 240;
         --metallic-dark: 0.55 0.03 240;
         
+        /* Golden Colors for Wordmark */
+        --golden: 0.65 0.15 75;
+        --golden-light: 0.80 0.12 85;
+        --golden-dark: 0.50 0.18 65;
+        
         --destructive: 0.577 0.245 27.325;
         --destructive-foreground: 0.985 0 0;
-        --border: 0.88 0 0;
-        --input: 0.88 0 0;
-        --ring: 0.60 0.02 240;
+        --border: 0.89 0 0;
+        --input: 0.89 0 0;
+        --ring: 0.25 0 0;
+        --chart-1: 0.60 0.20 25;
+        --chart-2: 0.70 0.15 150;
+        --chart-3: 0.65 0.18 270;
+        --chart-4: 0.75 0.12 60;
+        --chart-5: 0.68 0.16 330;
     }
 
     .dark {
-        --background: 0.12 0 0;
+        --background: 0.15 0 0;
         --foreground: 0.98 0 0;
-        --card: 0.16 0 0;
+        --card: 0.18 0 0;
         --card-foreground: 0.98 0 0;
-        --popover: 0.18 0 0;
+        --popover: 0.15 0 0;
         --popover-foreground: 0.98 0 0;
         
-        --primary: 0.85 0.01 240;
-        --primary-foreground: 0.12 0 0;
-        --secondary: 0.22 0 0;
+        --primary: 0.85 0 0;
+        --primary-foreground: 0.15 0 0;
+        --secondary: 0.25 0 0;
         --secondary-foreground: 0.98 0 0;
-        --muted: 0.20 0 0;
+        --muted: 0.22 0 0;
         --muted-foreground: 0.65 0 0;
-        --accent: 0.28 0 0;
+        --accent: 0.22 0 0;
         --accent-foreground: 0.98 0 0;
         
         --metallic: 0.75 0.02 240;
         --metallic-light: 0.88 0.01 240;
         --metallic-dark: 0.60 0.03 240;
         
-        --destructive: 0.704 0.191 22.216;
-        --destructive-foreground: 0.98 0 0;
-        --border: 1 0 0 / 12%;
-        --input: 1 0 0 / 18%;
-        --ring: 0.70 0.02 240;
+        --golden: 0.70 0.15 75;
+        --golden-light: 0.85 0.12 85;
+        --golden-dark: 0.55 0.18 65;
+        
+        --destructive: 0.577 0.245 27.325;
+        --destructive-foreground: 0.985 0 0;
+        --border: 0.25 0 0;
+        --input: 0.25 0 0;
+        --ring: 0.85 0 0;
+        --chart-1: 0.65 0.20 25;
+        --chart-2: 0.75 0.15 150;
+        --chart-3: 0.70 0.18 270;
+        --chart-4: 0.80 0.12 60;
+        --chart-5: 0.73 0.16 330;
     }
+}
 
+@layer base {
     * {
         @apply border-border;
     }
-    
     body {
-        @apply bg-background text-foreground antialiased;
+        @apply bg-background text-foreground;
         font-feature-settings: "rlig" 1, "calt" 1;
-    }
-    
-    html {
-        scroll-behavior: smooth;
     }
 }
 
 @layer utilities {
-    /* Metallic Text Utilities */
-    .text-metallic {
-        color: oklch(var(--metallic));
+    /* Premium Wordmark Styling - Plain White with Shadow */
+    .wordmark-premium {
+        text-shadow: 
+            0 0 20px rgba(255, 255, 255, 0.3),
+            0 2px 4px rgba(0, 0, 0, 0.5),
+            0 4px 8px rgba(0, 0, 0, 0.3);
+        letter-spacing: -0.02em;
     }
-    
-    .text-metallic-light {
-        color: oklch(var(--metallic-light));
+
+    /* White to Purple Gradient for Headings */
+    .heading-gradient {
+        background: linear-gradient(135deg, 
+            oklch(0.98 0 0) 0%, 
+            oklch(0.75 0.20 285) 100%
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
-    
-    .text-metallic-dark {
-        color: oklch(var(--metallic-dark));
+
+    /* Metallic Gradient Text */
+    .text-metallic-gradient {
+        background: linear-gradient(135deg, 
+            oklch(var(--metallic-light)) 0%, 
+            oklch(var(--metallic)) 50%, 
+            oklch(var(--metallic-dark)) 100%
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
-    
-    /* Premium Shadow System */
-    .shadow-premium {
-        box-shadow: 
-            0 1px 2px 0 rgb(0 0 0 / 0.05),
-            0 4px 8px -2px rgb(0 0 0 / 0.1);
+
+    /* Golden Gradient Text */
+    .text-golden-gradient {
+        background: linear-gradient(135deg, 
+            oklch(var(--golden-light)) 0%, 
+            oklch(var(--golden)) 50%, 
+            oklch(var(--golden-dark)) 100%
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
-    
-    .shadow-premium-sm {
-        box-shadow: 0 2px 4px -1px rgb(0 0 0 / 0.06);
+
+    /* Premium Shadow Utilities */
+    .drop-shadow-metallic {
+        filter: drop-shadow(0 2px 4px oklch(var(--metallic) / 0.3));
     }
-    
-    .shadow-premium-lg {
-        box-shadow: 
-            0 4px 6px -1px rgb(0 0 0 / 0.1),
-            0 10px 20px -5px rgb(0 0 0 / 0.15),
-            0 0 40px -10px oklch(var(--metallic) / 0.1);
+
+    .drop-shadow-golden {
+        filter: drop-shadow(0 2px 4px oklch(var(--golden) / 0.3));
     }
-    
-    .shadow-metallic {
-        box-shadow: 
-            0 2px 8px -2px oklch(var(--metallic) / 0.2),
-            0 4px 16px -4px oklch(var(--metallic) / 0.1);
-    }
-    
-    /* Animations */
-    @keyframes float {
-        0%, 100% {
-            transform: translateY(0px);
-        }
-        50% {
-            transform: translateY(-20px);
-        }
-    }
-    
-    .animate-float {
-        animation: float 6s ease-in-out infinite;
-    }
-    
+
     /* Service Card 3D Effect */
     .service-card {
         transform-style: preserve-3d;
-        transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+        transition: transform 0.5s ease;
     }
-    
+
     .service-card:hover {
         transform: translateY(-8px) rotateX(2deg);
     }
-    
-    /* Smooth Transitions */
-    .transition-all {
-        transition-property: all;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    
-    .duration-1500 {
-        transition-duration: 1500ms;
-    }
-    
-    /* Reduced Motion */
-    @media (prefers-reduced-motion: reduce) {
-        *,
-        *::before,
-        *::after {
-            animation-duration: 0.01ms !important;
-            animation-iteration-count: 1 !important;
-            transition-duration: 0.01ms !important;
-        }
-        
-        html {
-            scroll-behavior: auto;
-        }
+
+    /* Smooth Scroll */
+    html {
+        scroll-behavior: smooth;
     }
 }

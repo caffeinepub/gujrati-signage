@@ -8,10 +8,122 @@
 
 import { IDL } from '@icp-sdk/core/candid';
 
-export const idlService = IDL.Service({});
+export const UserRole = IDL.Variant({
+  'admin' : IDL.Null,
+  'user' : IDL.Null,
+  'guest' : IDL.Null,
+});
+export const Enquiry = IDL.Record({
+  'id' : IDL.Nat,
+  'name' : IDL.Text,
+  'email' : IDL.Text,
+  'message' : IDL.Text,
+  'timestamp' : IDL.Int,
+  'phone' : IDL.Text,
+});
+export const Order = IDL.Record({
+  'id' : IDL.Nat,
+  'customerName' : IDL.Text,
+  'productId' : IDL.Text,
+  'notes' : IDL.Text,
+  'timestamp' : IDL.Int,
+  'quantity' : IDL.Nat,
+  'phone' : IDL.Text,
+});
+export const UserProfile = IDL.Record({ 'name' : IDL.Text });
+export const EnquiryInput = IDL.Record({
+  'name' : IDL.Text,
+  'email' : IDL.Text,
+  'message' : IDL.Text,
+  'phone' : IDL.Text,
+});
+export const OrderInput = IDL.Record({
+  'customerName' : IDL.Text,
+  'productId' : IDL.Text,
+  'notes' : IDL.Text,
+  'quantity' : IDL.Nat,
+  'phone' : IDL.Text,
+});
+
+export const idlService = IDL.Service({
+  '_initializeAccessControlWithSecret' : IDL.Func([IDL.Text], [], []),
+  'assignCallerUserRole' : IDL.Func([IDL.Principal, UserRole], [], []),
+  'getAllEnquiries' : IDL.Func([], [IDL.Vec(Enquiry)], ['query']),
+  'getAllOrders' : IDL.Func([], [IDL.Vec(Order)], ['query']),
+  'getCallerUserProfile' : IDL.Func([], [IDL.Opt(UserProfile)], ['query']),
+  'getCallerUserRole' : IDL.Func([], [UserRole], ['query']),
+  'getEnquiry' : IDL.Func([IDL.Nat], [Enquiry], ['query']),
+  'getOrder' : IDL.Func([IDL.Nat], [Order], ['query']),
+  'getUserProfile' : IDL.Func(
+      [IDL.Principal],
+      [IDL.Opt(UserProfile)],
+      ['query'],
+    ),
+  'isCallerAdmin' : IDL.Func([], [IDL.Bool], ['query']),
+  'saveCallerUserProfile' : IDL.Func([UserProfile], [], []),
+  'submitEnquiry' : IDL.Func([EnquiryInput], [IDL.Nat, IDL.Int], []),
+  'submitOrder' : IDL.Func([OrderInput], [IDL.Nat, IDL.Int], []),
+});
 
 export const idlInitArgs = [];
 
-export const idlFactory = ({ IDL }) => { return IDL.Service({}); };
+export const idlFactory = ({ IDL }) => {
+  const UserRole = IDL.Variant({
+    'admin' : IDL.Null,
+    'user' : IDL.Null,
+    'guest' : IDL.Null,
+  });
+  const Enquiry = IDL.Record({
+    'id' : IDL.Nat,
+    'name' : IDL.Text,
+    'email' : IDL.Text,
+    'message' : IDL.Text,
+    'timestamp' : IDL.Int,
+    'phone' : IDL.Text,
+  });
+  const Order = IDL.Record({
+    'id' : IDL.Nat,
+    'customerName' : IDL.Text,
+    'productId' : IDL.Text,
+    'notes' : IDL.Text,
+    'timestamp' : IDL.Int,
+    'quantity' : IDL.Nat,
+    'phone' : IDL.Text,
+  });
+  const UserProfile = IDL.Record({ 'name' : IDL.Text });
+  const EnquiryInput = IDL.Record({
+    'name' : IDL.Text,
+    'email' : IDL.Text,
+    'message' : IDL.Text,
+    'phone' : IDL.Text,
+  });
+  const OrderInput = IDL.Record({
+    'customerName' : IDL.Text,
+    'productId' : IDL.Text,
+    'notes' : IDL.Text,
+    'quantity' : IDL.Nat,
+    'phone' : IDL.Text,
+  });
+  
+  return IDL.Service({
+    '_initializeAccessControlWithSecret' : IDL.Func([IDL.Text], [], []),
+    'assignCallerUserRole' : IDL.Func([IDL.Principal, UserRole], [], []),
+    'getAllEnquiries' : IDL.Func([], [IDL.Vec(Enquiry)], ['query']),
+    'getAllOrders' : IDL.Func([], [IDL.Vec(Order)], ['query']),
+    'getCallerUserProfile' : IDL.Func([], [IDL.Opt(UserProfile)], ['query']),
+    'getCallerUserRole' : IDL.Func([], [UserRole], ['query']),
+    'getEnquiry' : IDL.Func([IDL.Nat], [Enquiry], ['query']),
+    'getOrder' : IDL.Func([IDL.Nat], [Order], ['query']),
+    'getUserProfile' : IDL.Func(
+        [IDL.Principal],
+        [IDL.Opt(UserProfile)],
+        ['query'],
+      ),
+    'isCallerAdmin' : IDL.Func([], [IDL.Bool], ['query']),
+    'saveCallerUserProfile' : IDL.Func([UserProfile], [], []),
+    'submitEnquiry' : IDL.Func([EnquiryInput], [IDL.Nat, IDL.Int], []),
+    'submitOrder' : IDL.Func([OrderInput], [IDL.Nat, IDL.Int], []),
+  });
+};
 
 export const init = ({ IDL }) => { return []; };

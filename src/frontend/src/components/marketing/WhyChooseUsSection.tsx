@@ -60,11 +60,11 @@ export default function WhyChooseUsSection() {
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 tracking-tight">
               Why Choose{' '}
-              <span className="bg-gradient-to-r from-metallic-light via-metallic to-metallic-dark bg-clip-text text-transparent">
+              <span className="heading-gradient">
                 Us
               </span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-transparent via-metallic to-transparent mx-auto mb-6" />
+            <div className="w-24 h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent mx-auto mb-6" />
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               The values that define our commitment to excellence
             </p>
@@ -84,10 +84,10 @@ export default function WhyChooseUsSection() {
                 }`}
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
-                <div className="relative inline-flex items-center justify-center w-20 h-20 mb-6 rounded-full bg-gradient-to-br from-metallic-light/20 to-metallic-dark/20 group-hover:from-metallic-light/30 group-hover:to-metallic-dark/30 transition-all duration-500 group-hover:scale-110 shadow-premium">
-                  <Icon className="w-10 h-10 text-metallic" strokeWidth={1.5} />
+                <div className="relative inline-flex items-center justify-center w-20 h-20 mb-6 rounded-full bg-gradient-to-br from-purple-500/20 to-purple-600/20 group-hover:from-purple-500/30 group-hover:to-purple-600/30 transition-all duration-500 group-hover:scale-110 shadow-premium">
+                  <Icon className="w-10 h-10 text-purple-500" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-xl font-bold mb-3 group-hover:text-metallic transition-colors duration-300">
+                <h3 className="text-xl font-bold mb-3 group-hover:text-purple-500 transition-colors duration-300">
                   {reason.title}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">

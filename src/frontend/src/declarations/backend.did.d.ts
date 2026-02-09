@@ -10,7 +10,55 @@ import type { ActorMethod } from '@icp-sdk/core/agent';
 import type { IDL } from '@icp-sdk/core/candid';
 import type { Principal } from '@icp-sdk/core/principal';
 
-export interface _SERVICE {}
+export interface Enquiry {
+  'id' : bigint,
+  'name' : string,
+  'email' : string,
+  'message' : string,
+  'timestamp' : bigint,
+  'phone' : string,
+}
+export interface EnquiryInput {
+  'name' : string,
+  'email' : string,
+  'message' : string,
+  'phone' : string,
+}
+export interface Order {
+  'id' : bigint,
+  'customerName' : string,
+  'productId' : string,
+  'notes' : string,
+  'timestamp' : bigint,
+  'quantity' : bigint,
+  'phone' : string,
+}
+export interface OrderInput {
+  'customerName' : string,
+  'productId' : string,
+  'notes' : string,
+  'quantity' : bigint,
+  'phone' : string,
+}
+export interface UserProfile { 'name' : string }
+export type UserRole = { 'admin' : null } |
+  { 'user' : null } |
+  { 'guest' : null };
+export interface _SERVICE {
+  '_initializeAccessControlWithSecret' : ActorMethod<[string], undefined>,
+  'assignCallerUserRole' : ActorMethod<[Principal, UserRole], undefined>,
+  'getAllEnquiries' : ActorMethod<[], Array<Enquiry>>,
+  'getAllOrders' : ActorMethod<[], Array<Order>>,
+  'getCallerUserProfile' : ActorMethod<[], [] | [UserProfile]>,
+  'getCallerUserRole' : ActorMethod<[], UserRole>,
+  'getEnquiry' : ActorMethod<[bigint], Enquiry>,
+  'getOrder' : ActorMethod<[bigint], Order>,
+  'getUserProfile' : ActorMethod<[Principal], [] | [UserProfile]>,
+  'isCallerAdmin' : ActorMethod<[], boolean>,
+  'saveCallerUserProfile' : ActorMethod<[UserProfile], undefined>,
+  'submitEnquiry' : ActorMethod<[EnquiryInput], [bigint, bigint]>,
+  'submitOrder' : ActorMethod<[OrderInput], [bigint, bigint]>,
+}
 export declare const idlService: IDL.ServiceClass;
 export declare const idlInitArgs: IDL.Type[];
 export declare const idlFactory: IDL.InterfaceFactory;

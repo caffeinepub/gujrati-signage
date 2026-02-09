@@ -2,14 +2,21 @@ import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import Wordmark from './Wordmark';
 
 const navLinks = [
-  { label: 'Home', href: '#hero' },
-  { label: 'About', href: '#about' },
-  { label: 'Services', href: '#services' },
-  { label: 'Gallery', href: '#work' },
-  { label: 'Why Us', href: '#why-choose-us' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Home', href: '#hero', description: 'Welcome to Gujrati Signage' },
+  { label: 'About', href: '#about', description: 'Our legacy since 1960' },
+  { label: 'Founders', href: '#founders', description: 'Meet the visionaries behind our craft' },
+  { label: 'Vision & Mission', href: '#vision-mission', description: 'Our guiding principles' },
+  { label: 'Services', href: '#services', description: 'Comprehensive signage solutions' },
+  { label: 'Products', href: '#products', description: 'Explore our product range' },
+  { label: 'Gallery', href: '#work', description: 'View our completed projects' },
+  { label: 'Why Us', href: '#why-choose-us', description: 'What sets us apart' },
+  { label: 'Payment', href: '#payment', description: 'Flexible payment options' },
+  { label: 'Enquiry', href: '#enquiry', description: 'Send us your questions' },
+  { label: 'Order', href: '#order', description: 'Place your order today' },
+  { label: 'Contact', href: '#contact', description: 'Get in touch with us' },
 ];
 
 export default function HeaderNav() {
@@ -47,33 +54,29 @@ export default function HeaderNav() {
             onClick={() => scrollToSection('#hero')}
             className="flex items-center space-x-3 group"
           >
-            <div className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-lg overflow-hidden shadow-metallic transition-transform duration-300 group-hover:scale-105">
-              <img
-                src="/assets/brand/whatsapp-logo.jpeg"
-                alt="Gujrati Signage Logo"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent pointer-events-none" />
-            </div>
-            <div className="hidden sm:block">
-              <div className="text-lg font-bold tracking-tight text-foreground">
-                Gujrati Signage
-              </div>
-              <div className="text-xs text-muted-foreground">Since 1960</div>
+            <div className="flex flex-col">
+              <Wordmark size="md" />
+              <div className="text-xs text-muted-foreground mt-1">Since 1960</div>
             </div>
           </button>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-1">
             {navLinks.map((link) => (
-              <Button
-                key={link.href}
-                variant="ghost"
-                onClick={() => scrollToSection(link.href)}
-                className="text-sm font-medium hover:text-primary transition-colors"
-              >
-                {link.label}
-              </Button>
+              <div key={link.href} className="relative group/nav">
+                <Button
+                  variant="ghost"
+                  onClick={() => scrollToSection(link.href)}
+                  className="text-sm font-medium hover:text-primary transition-colors"
+                >
+                  {link.label}
+                </Button>
+                {/* Hover detail panel - desktop only */}
+                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 px-3 py-2 bg-background/95 backdrop-blur-md border border-border/50 rounded-lg shadow-premium-lg opacity-0 invisible group-hover/nav:opacity-100 group-hover/nav:visible transition-all duration-300 pointer-events-none whitespace-nowrap z-50">
+                  <p className="text-xs text-muted-foreground">{link.description}</p>
+                  <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-background/95 border-l border-t border-border/50 rotate-45" />
+                </div>
+              </div>
             ))}
           </nav>
 

@@ -32,6 +32,31 @@ const services = [
     description: 'High-quality reflective stickers for safety and visibility.',
     image: '/assets/generated/service-radium-stickers.dim_1200x800.png',
   },
+  {
+    title: 'Hospital Boards',
+    description: 'Professional medical signage for hospitals and healthcare facilities.',
+    image: '/assets/generated/service-hospital-boards.dim_1200x800.png',
+  },
+  {
+    title: 'Reception Boards',
+    description: 'Elegant reception signage that creates a welcoming first impression.',
+    image: '/assets/generated/service-reception-boards.dim_1200x800.png',
+  },
+  {
+    title: 'Steel Letters',
+    description: 'Premium stainless steel lettering for a sophisticated, lasting impact.',
+    image: '/assets/generated/service-steel-letters.dim_1200x800.png',
+  },
+  {
+    title: 'Neon Signs',
+    description: 'Eye-catching neon signage that brings vibrant energy to any space.',
+    image: '/assets/generated/service-neon-signs.dim_1200x800.png',
+  },
+  {
+    title: 'Glow Sign Boards',
+    description: 'Luminous glow signs that ensure maximum visibility around the clock.',
+    image: '/assets/generated/service-glow-sign-boards.dim_1200x800.png',
+  },
 ];
 
 export default function ServicesSection() {
@@ -70,11 +95,11 @@ export default function ServicesSection() {
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 tracking-tight">
               Our{' '}
-              <span className="bg-gradient-to-r from-metallic-light via-metallic to-metallic-dark bg-clip-text text-transparent">
+              <span className="heading-gradient">
                 Services
               </span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-transparent via-metallic to-transparent mx-auto mb-6" />
+            <div className="w-24 h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent mx-auto mb-6" />
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Comprehensive signage solutions crafted with precision and care
             </p>
@@ -92,7 +117,7 @@ export default function ServicesSection() {
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
-              <Card className="group h-full overflow-hidden border-border/50 hover:border-metallic/50 transition-all duration-500 hover:shadow-premium-lg service-card">
+              <Card className="group h-full overflow-hidden border-border/50 hover:border-purple-500/50 transition-all duration-500 hover:shadow-premium-lg service-card">
                 <div className="relative overflow-hidden aspect-[3/2]">
                   <img
                     src={service.image}
@@ -102,7 +127,7 @@ export default function ServicesSection() {
                   <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-3 group-hover:text-metallic transition-colors duration-300">
+                  <h3 className="text-xl font-bold mb-3 group-hover:text-purple-500 transition-colors duration-300">
                     {service.title}
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">

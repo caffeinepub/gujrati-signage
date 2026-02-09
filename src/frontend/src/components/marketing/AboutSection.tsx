@@ -36,11 +36,11 @@ export default function AboutSection() {
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 tracking-tight">
               A Legacy of{' '}
-              <span className="bg-gradient-to-r from-metallic-light via-metallic to-metallic-dark bg-clip-text text-transparent">
+              <span className="heading-gradient">
                 Excellence
               </span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-transparent via-metallic to-transparent mx-auto mb-8" />
+            <div className="w-24 h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent mx-auto mb-8" />
           </div>
 
           <div
@@ -65,19 +65,19 @@ export default function AboutSection() {
             }`}
           >
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-metallic mb-2">60+</div>
+              <div className="text-4xl md:text-5xl font-bold text-purple-500 mb-2">60+</div>
               <div className="text-sm text-muted-foreground">Years of Excellence</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-metallic mb-2">1000+</div>
+              <div className="text-4xl md:text-5xl font-bold text-purple-500 mb-2">1,000,000+</div>
               <div className="text-sm text-muted-foreground">Projects Completed</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-metallic mb-2">3</div>
+              <div className="text-4xl md:text-5xl font-bold text-purple-500 mb-2">3</div>
               <div className="text-sm text-muted-foreground">Generations</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-metallic mb-2">100%</div>
+              <div className="text-4xl md:text-5xl font-bold text-purple-500 mb-2">100%</div>
               <div className="text-sm text-muted-foreground">Quality Assured</div>
             </div>
           </div>
