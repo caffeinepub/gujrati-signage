@@ -1,0 +1,278 @@
+{
+  "kind": "build_request",
+  "title": "Premium 3D marketing website for Gujrati Signage (est. 1960) with intro phone+helper animation",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a modern, premium, minimal, fully responsive marketing website for “Gujrati Signage” (established 1960) that communicates legacy, craftsmanship, trust, and innovation using a black/white/metallic-silver/soft-neutral palette with subtle accent highlights, sophisticated typography, and balanced white space.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Design a modern, premium, aesthetic 3D website for a heritage signage company named Gujrati Signage, established in 1960.",
+          "Ultra-clean, premium minimal UI",
+          "Color palette: black, white, metallic silver, soft neutrals, subtle accent highlights",
+          "Fully responsive (mobile, tablet, desktop)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All key pages/sections render correctly on mobile, tablet, and desktop without horizontal overflow.",
+        "Typography uses strong headline styling and readable body text with a premium minimal aesthetic.",
+        "Overall palette adheres to black/white/silver/neutrals with restrained accent usage (no flashy colors dominating)."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Implement the requested single-page website structure with cinematic section transitions/parallax and smooth micro-animations: Hero, About Us, Our Services (3D cards), Work Showcase/Gallery, Why Choose Us, and Contact.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "🧱 Website Structure",
+          "Parallax scrolling and cinematic section transitions",
+          "Smooth micro-animations and elegant hover effects"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Navigation (header links or in-page anchors) can scroll to each section smoothly.",
+        "Each section has subtle motion/transition that remains performant and does not block scrolling.",
+        "A mix of light and dark section backgrounds is used to create depth (especially around the gallery/showcase area)."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Build the Hero section with headline “Crafting Signage Excellence Since 1960”, a subtle animated 3D signage/light-board element, a smooth scroll cue, and two clear CTAs: “Contact Us” and “View Our Work”.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Hero Section",
+          "“Crafting Signage Excellence Since 1960”",
+          "Subtle 3D animated signage boards or light boards",
+          "Clear CTAs: Contact Us | View Our Work"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Hero displays the exact headline text and two CTAs.",
+        "“Contact Us” CTA scrolls to the Contact section; “View Our Work” scrolls to the Gallery/Showcase section.",
+        "Hero contains an animated 3D element with soft lighting/shadows/reflections consistent with the premium aesthetic."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Add an intro interaction at the start of the site: a phone UI pops up and a Bitmoji-like (cartoon) “Vikrant Patel” helper character appears and asks: “How can I help you?” with options to proceed (e.g., Contact, Services, View Work) while allowing the user to dismiss/skip the intro.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "and at start I want one phone pops up and vikrant patel like Bitmoji comes and ask how can I help you customer"
+        ]
+      },
+      "acceptanceCriteria": [
+        "On first load, a phone pop-up animation plays and the helper character appears with the text “How can I help you?” (English).",
+        "The intro provides at least 3 quick actions that navigate to relevant sections and a visible dismiss/skip control.",
+        "If dismissed, the user can continue using the site normally; the intro does not block access to content."
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Implement the About Us section with a brand story emphasizing establishment in 1960, experience, precision, and long-term trust, using elegant text animations and a clean layout.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "About Us",
+          "Brand story highlighting establishment in 1960",
+          "Focus on experience, precision, and long-term trust",
+          "Elegant text animations and clean layout"
+        ]
+      },
+      "acceptanceCriteria": [
+        "About section explicitly mentions “Established in 1960” and communicates legacy/trust/craftsmanship in concise premium copy.",
+        "Text reveal/scroll animations are subtle and do not cause layout shift."
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Implement “Our Services” as premium interactive 3D service cards with smooth hover/tap interactions for: Building Signages, Name Plates, Number Plates, Light Boards, Custom Sign Boards, Radium Stickers.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Our Services (3D Service Cards)",
+          "Each service displayed using premium 3D cards with smooth interactions"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All six services are displayed as distinct cards with consistent styling.",
+        "Cards have 3D depth via lighting/shadow/tilt (mouse hover on desktop; subtle press interaction on mobile).",
+        "Cards remain accessible: text readable, focus states visible, and interactions do not depend solely on hover."
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Create a Work Showcase / Gallery section with high-quality visuals (provided/generated), smooth transitions, and immersive scrolling behavior consistent with the premium look.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Work Showcase / Gallery",
+          "High-quality visuals of completed signage",
+          "Smooth transitions and immersive scrolling",
+          "Mix of light and dark sections for depth"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Gallery displays a grid or cinematic carousel with multiple images and smooth transitions.",
+        "Images are optimized for web (reasonable file size) and use proper responsive sizing.",
+        "Section visually alternates or blends light/dark backgrounds to add depth without reducing readability."
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Implement a “Why Choose Us” section listing: Over 60 years of expertise, Custom-built solutions, Quality materials & craftsmanship, Trusted by generations; use minimal icons with subtle animations.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Why Choose Us",
+          "Over 60 years of expertise",
+          "Custom-built solutions",
+          "Quality materials & craftsmanship",
+          "Trusted by generations",
+          "Minimal icons with subtle animation"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All four reasons appear with minimal icons and subtle motion (e.g., small hover/scroll reveal).",
+        "Layout is clean and consistent with premium minimal UI and whitespace."
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "text": "Build the Contact section with a clean, elegant layout that clearly shows contact details and provides click-to-call buttons and social links with refined hover effects. Include: Phone: 9828939660, 9828054199; Email: vikratpatell77.vp@gmail.com; Instagram: https://www.instagram.com/gujratisignage_; Facebook: https://www.facebook.com/share/1HjagdkEXW/",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "📞 Contact Information (Include Clearly)",
+          "Phone: 9828939660, 9828054199",
+          "Email: vikratpatell77.vp@gmail.com",
+          "Instagram: https://www.instagram.com/gujratisignage_",
+          "Facebook: https://www.facebook.com/share/1HjagdkEXW/",
+          "Click-to-call buttons",
+          "Social media links with refined hover effects"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Phone numbers are clickable (tel: links) and visually presented as buttons or prominent links.",
+        "Email is clickable (mailto:) and displayed clearly.",
+        "Instagram and Facebook links open in a new tab and have refined hover/focus states.",
+        "All contact info matches the provided values exactly."
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "text": "Add SEO-friendly structure for a marketing site: semantic sectioning, sensible heading hierarchy, descriptive page title/description, and accessible image alt text.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "SEO-friendly structure"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Heading hierarchy is logical (single H1, section H2s, etc.).",
+        "Page has a descriptive title and meta description referencing Gujrati Signage and “Since 1960”.",
+        "All meaningful images have non-empty alt text; decorative images are marked appropriately."
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "text": "Use the user-provided uploaded image (WhatsApp Image 2026-02-09 at 14.40.31.jpeg) as a brand/logo asset in the site (e.g., header and/or hero) and ensure it is displayed crisply on light/dark backgrounds.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "The user has uploaded 1 image(s): WhatsApp Image 2026-02-09 at 14.40.31.jpeg.",
+          "add images as per things"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The uploaded image is included as a static asset and used as the brand logo in at least one prominent location.",
+        "Logo remains legible on both light and dark surfaces (via layout, background treatment, or subtle shadow/glow)."
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "text": "Add and render generated static images aligned to the premium 3D aesthetic for the hero, services, and gallery; store them as static assets and use them in the relevant sections without routing through the backend.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "add images as per things"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All images listed in imageRequirements.required are present as static files and referenced by the UI.",
+        "No backend endpoints are used for serving or generating images at runtime.",
+        "Images match the black/white/silver/neutral premium aesthetic and are used in the intended sections (hero/services/gallery/intro)."
+      ]
+    }
+  ],
+  "constraints": [
+    "Frontend code must not modify any files under frontend/src/components/ui or other immutablePaths provided by the system context.",
+    "Backend must remain single-actor; do not introduce additional backend services or external databases.",
+    "Do not add third-party authentication providers (only Internet Identity is supported), and do not add real-time/WebSocket features."
+  ],
+  "nonGoals": [
+    "Implementing a server-backed contact form submission workflow (email sending or database storage).",
+    "Building a multi-page CMS/admin panel for managing gallery images.",
+    "Integrating third-party analytics/marketing scripts."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Premium abstract hero backdrop with soft gradients, subtle metallic sheen, and gentle vignette (hero-backdrop.dim_1920x1080.png)",
+      "3D minimal signage/light-board render with soft reflections and studio lighting (hero-signage-3d.dim_1400x900.png)",
+      "Modern smartphone frame render on dark background with soft shadow (intro-phone.dim_900x1200.png)",
+      "3D cartoon helper avatar illustration, friendly premium style, neutral colors, clean outlines, subtle shading (helper-avatar.dim_1024x1024.png)",
+      "Minimal metallic icon set (4 icons) with silver/neutral tones, simple geometric style (why-icons-sprite.dim_1024x1024.png)",
+      "Service image: building signage close-up, premium 3D/photoreal look, neutral palette (service-building-signages.dim_1200x800.png)",
+      "Service image: name plate premium close-up, neutral palette, soft lighting (service-name-plates.dim_1200x800.png)",
+      "Service image: number plate premium close-up, neutral palette, soft lighting (service-number-plates.dim_1200x800.png)",
+      "Service image: light board premium close-up, subtle glow, calm luxury look (service-light-boards.dim_1200x800.png)",
+      "Service image: custom sign board premium close-up, neutral palette, soft reflections (service-custom-sign-boards.dim_1200x800.png)",
+      "Service image: radium sticker premium macro/close-up, subtle sheen, neutral palette (service-radium-stickers.dim_1200x800.png)",
+      "Gallery image 1: premium storefront signage installation at night, tasteful lighting (gallery-01.dim_1600x1000.png)",
+      "Gallery image 2: premium interior nameplate signage, clean composition (gallery-02.dim_1600x1000.png)",
+      "Gallery image 3: premium exterior building signage in daylight, minimalist composition (gallery-03.dim_1600x1000.png)",
+      "Gallery image 4: premium illuminated light board detail shot, soft bokeh (gallery-04.dim_1600x1000.png)"
+    ],
+    "edits": []
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "frontend/src/App.tsx": "Main application component that manages the intro overlay state and renders the marketing landing page with theme provider.",
+  "frontend/src/pages/MarketingLanding.tsx": "Single-page marketing layout composing all sections (Hero, About, Services, Gallery, Why Choose Us, Contact) with header and footer.",
+  "frontend/src/components/marketing/HeaderNav.tsx": "Sticky header navigation with logo, smooth-scroll links, and responsive mobile menu using Sheet component.",
+  "frontend/src/components/marketing/HeroSection.tsx": "Hero section with animated 3D signage, headline \"Crafting Signage Excellence Since 1960\", CTAs, and scroll cue with fixed gradient text styling.",
+  "frontend/src/components/marketing/AboutSection.tsx": "About section highlighting the company's 1960 establishment, legacy, craftsmanship, and key statistics with scroll-triggered animations and fixed gradient text.",
+  "frontend/src/components/marketing/ServicesSection.tsx": "Services section displaying six premium 3D service cards with hover effects and images for each signage type with fixed gradient text.",
+  "frontend/src/components/marketing/GallerySection.tsx": "Gallery section with grid layout and Dialog-based image viewer for showcasing completed signage work with fixed gradient text.",
+  "frontend/src/components/marketing/WhyChooseUsSection.tsx": "Why Choose Us section featuring four reasons with icons and descriptions, emphasizing expertise and trust with fixed gradient text.",
+  "frontend/src/components/marketing/ContactSection.tsx": "Contact section with click-to-call phone buttons, email link, and social media links with refined hover states and updated Tailwind v3 classes.",
+  "frontend/src/components/marketing/Footer.tsx": "Footer component with branding, copyright, and Caffeine.ai attribution with UTM tracking.",
+  "frontend/src/components/marketing/IntroHelperOverlay.tsx": "Intro overlay dialog with animated phone, helper avatar, welcome message with gradient text, and quick action buttons for first-time visitors.",
+  "frontend/src/index.css": "Global styles with premium black/white/silver OKLCH color system, metallic gradients, shadow utilities, and smooth animations.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with metallic color tokens, premium shadows, custom fonts (Inter, Outfit), and float animation.",
+  "frontend/index.html": "HTML entry point with SEO meta tags, page title referencing \"Since 1960\", and Google Fonts preload for Inter and Outfit."
+}

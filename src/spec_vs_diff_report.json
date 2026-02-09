@@ -1,0 +1,79 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-09T21:35:13.596Z",
+  "summary": "Diff adds a single-page premium marketing landing with Hero/About/Services/Gallery/Why/Contact sections, smooth-scroll nav, intro helper overlay, and premium palette/animations. Several requirements appear implemented, but some key details cannot be confirmed from the diff summary (notably presence of required static image assets and exact intro prompt text), and some unrequested authentication/actor plumbing was introduced.",
+  "missing_requirements": [
+    {
+      "id": "REQ-4",
+      "requirement": "Helper character asks the exact text “How can I help you?” (English) in the intro interaction.",
+      "reason": "The implemented overlay message is “How can I help you today?” which does not match the exact required wording.",
+      "evidence": [
+        "frontend/src/components/marketing/IntroHelperOverlay.tsx"
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "requirement": "Use the user-provided uploaded image “WhatsApp Image 2026-02-09 at 14.40.31.jpeg” as the brand/logo asset.",
+      "reason": "UI references a logo at “/assets/brand/whatsapp-logo.jpeg”; the diff does not show inclusion of the specified uploaded filename, so it’s not verifiable that the provided upload is used as-is.",
+      "evidence": [
+        "frontend/src/components/marketing/HeaderNav.tsx",
+        "frontend/src/components/marketing/Footer.tsx"
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "requirement": "All required generated images are present as static files and referenced by the UI (hero/services/gallery/intro, plus why-icons sprite).",
+      "reason": "Components reference many required image paths under /assets/generated, but the diff summary does not include the added static image files themselves (and the icon sprite is not referenced). Without the asset files in the diff, the requirement cannot be confirmed as implemented.",
+      "evidence": [
+        "frontend/src/components/marketing/HeroSection.tsx",
+        "frontend/src/components/marketing/IntroHelperOverlay.tsx",
+        "frontend/src/components/marketing/ServicesSection.tsx",
+        "frontend/src/components/marketing/GallerySection.tsx"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Introduced Internet Identity authentication context/hooks and actor creation/query infrastructure (react-query + useActor/useInternetIdentity).",
+      "reason": "BuildRequest does not ask for authentication/login flows or actor query hooks for this marketing site; it only constrains auth providers if used.",
+      "evidence": [
+        "frontend/src/hooks/useInternetIdentity.ts",
+        "frontend/src/hooks/useActor.ts",
+        "frontend/src/main.tsx"
+      ]
+    },
+    {
+      "description": "Added a Caffeine.ai attribution link with UTM tracking in the footer.",
+      "reason": "BuildRequest does not request third-party attribution/tracking links; it also lists non-goals around marketing/analytics scripts (while this is a link, it is still an unrequested marketing attribution element).",
+      "evidence": [
+        "frontend/src/components/marketing/Footer.tsx"
+      ]
+    }
+  ],
+  "confidence": 0.68,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/marketing/AboutSection.tsx",
+    "frontend/src/components/marketing/ContactSection.tsx",
+    "frontend/src/components/marketing/Footer.tsx",
+    "frontend/src/components/marketing/GallerySection.tsx",
+    "frontend/src/components/marketing/HeaderNav.tsx",
+    "frontend/src/components/marketing/HeroSection.tsx",
+    "frontend/src/components/marketing/IntroHelperOverlay.tsx",
+    "frontend/src/components/marketing/ServicesSection.tsx",
+    "frontend/src/components/marketing/WhyChooseUsSection.tsx",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/src/pages/MarketingLanding.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

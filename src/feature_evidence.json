@@ -1,0 +1,239 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-modern-premium-minimal-fully-responsive-marketing-website-for-gujrati-signage-established-1960-that-communicates-legacy-craftsmanship-trust-and-innovation-using-a-black-white-metallic-silver-soft-neutral-palette-with-subtle-accent-highlights-sophisticated-typography-and-balanced-white-space",
+      "featureTitle": "Create a modern, premium, minimal, fully responsive marketing website for “Gujrati Signage” (established 1960) that communicates legacy, craftsmanship, trust, and innovation using a black/white/metallic-silver/soft-neutral palette with subtle accent highlights, sophisticated typography, and balanced white space.",
+      "files": [
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-the-requested-single-page-website-structure-with-cinematic-section-transitions-parallax-and-smooth-micro-animations-hero-about-us-our-services-3d-cards-work-showcase-gallery-why-choose-us-and-contact",
+      "featureTitle": "Implement the requested single-page website structure with cinematic section transitions/parallax and smooth micro-animations: Hero, About Us, Our Services (3D cards), Work Showcase/Gallery, Why Choose Us, and Contact.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/marketing/HeaderNav.tsx",
+        "frontend/src/pages/MarketingLanding.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-the-hero-section-with-headline-crafting-signage-excellence-since-1960-a-subtle-animated-3d-signage-light-board-element-a-smooth-scroll-cue-and-two-clear-ctas-contact-us-and-view-our-work",
+      "featureTitle": "Build the Hero section with headline “Crafting Signage Excellence Since 1960”, a subtle animated 3D signage/light-board element, a smooth scroll cue, and two clear CTAs: “Contact Us” and “View Our Work”.",
+      "files": [
+        "frontend/src/components/marketing/HeroSection.tsx",
+        "frontend/src/pages/MarketingLanding.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-an-intro-interaction-at-the-start-of-the-site-a-phone-ui-pops-up-and-a-bitmoji-like-cartoon-vikrant-patel-helper-character-appears-and-asks-how-can-i-help-you-with-options-to-proceed-e-g-contact-services-view-work-while-allowing-the-user-to-dismiss-skip-the-intro",
+      "featureTitle": "Add an intro interaction at the start of the site: a phone UI pops up and a Bitmoji-like (cartoon) “Vikrant Patel” helper character appears and asks: “How can I help you?” with options to proceed (e.g., Contact, Services, View Work) while allowing the user to dismiss/skip the intro.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/marketing/IntroHelperOverlay.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-the-about-us-section-with-a-brand-story-emphasizing-establishment-in-1960-experience-precision-and-long-term-trust-using-elegant-text-animations-and-a-clean-layout",
+      "featureTitle": "Implement the About Us section with a brand story emphasizing establishment in 1960, experience, precision, and long-term trust, using elegant text animations and a clean layout.",
+      "files": [
+        "frontend/src/components/marketing/AboutSection.tsx",
+        "frontend/src/pages/MarketingLanding.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-our-services-as-premium-interactive-3d-service-cards-with-smooth-hover-tap-interactions-for-building-signages-name-plates-number-plates-light-boards-custom-sign-boards-radium-stickers",
+      "featureTitle": "Implement “Our Services” as premium interactive 3D service cards with smooth hover/tap interactions for: Building Signages, Name Plates, Number Plates, Light Boards, Custom Sign Boards, Radium Stickers.",
+      "files": [
+        "frontend/src/components/marketing/ServicesSection.tsx",
+        "frontend/src/pages/MarketingLanding.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-work-showcase-gallery-section-with-high-quality-visuals-provided-generated-smooth-transitions-and-immersive-scrolling-behavior-consistent-with-the-premium-look",
+      "featureTitle": "Create a Work Showcase / Gallery section with high-quality visuals (provided/generated), smooth transitions, and immersive scrolling behavior consistent with the premium look.",
+      "files": [
+        "frontend/src/components/marketing/GallerySection.tsx",
+        "frontend/src/pages/MarketingLanding.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-why-choose-us-section-listing-over-60-years-of-expertise-custom-built-solutions-quality-materials-craftsmanship-trusted-by-generations-use-minimal-icons-with-subtle-animations",
+      "featureTitle": "Implement a “Why Choose Us” section listing: Over 60 years of expertise, Custom-built solutions, Quality materials & craftsmanship, Trusted by generations; use minimal icons with subtle animations.",
+      "files": [
+        "frontend/src/components/marketing/WhyChooseUsSection.tsx",
+        "frontend/src/index.css",
+        "frontend/src/pages/MarketingLanding.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-the-contact-section-with-a-clean-elegant-layout-that-clearly-shows-contact-details-and-provides-click-to-call-buttons-and-social-links-with-refined-hover-effects-include-phone-9828939660-9828054199-email-vikratpatell77-vp-gmail-com-instagram-https-www-instagram-com-gujratisignage-facebook-https-www-facebook-com-share-1hjagdkexw",
+      "featureTitle": "Build the Contact section with a clean, elegant layout that clearly shows contact details and provides click-to-call buttons and social links with refined hover effects. Include: Phone: 9828939660, 9828054199; Email: vikratpatell77.vp@gmail.com; Instagram: https://www.instagram.com/gujratisignage_; Facebook: https://www.facebook.com/share/1HjagdkEXW/",
+      "files": [
+        "frontend/src/components/marketing/ContactSection.tsx",
+        "frontend/src/pages/MarketingLanding.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-9"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-seo-friendly-structure-for-a-marketing-site-semantic-sectioning-sensible-heading-hierarchy-descriptive-page-title-description-and-accessible-image-alt-text",
+      "featureTitle": "Add SEO-friendly structure for a marketing site: semantic sectioning, sensible heading hierarchy, descriptive page title/description, and accessible image alt text.",
+      "files": [
+        "frontend/index.html",
+        "frontend/src/components/marketing/GallerySection.tsx",
+        "frontend/src/pages/MarketingLanding.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-10"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-use-the-user-provided-uploaded-image-whatsapp-image-2026-02-09-at-14-40-31-jpeg-as-a-brand-logo-asset-in-the-site-e-g-header-and-or-hero-and-ensure-it-is-displayed-crisply-on-light-dark-backgrounds",
+      "featureTitle": "Use the user-provided uploaded image (WhatsApp Image 2026-02-09 at 14.40.31.jpeg) as a brand/logo asset in the site (e.g., header and/or hero) and ensure it is displayed crisply on light/dark backgrounds.",
+      "files": [
+        "frontend/src/components/marketing/HeaderNav.tsx",
+        "frontend/src/components/marketing/HeroSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-11"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-and-render-generated-static-images-aligned-to-the-premium-3d-aesthetic-for-the-hero-services-and-gallery-store-them-as-static-assets-and-use-them-in-the-relevant-sections-without-routing-through-the-backend",
+      "featureTitle": "Add and render generated static images aligned to the premium 3D aesthetic for the hero, services, and gallery; store them as static assets and use them in the relevant sections without routing through the backend.",
+      "files": [
+        "frontend/src/components/marketing/GallerySection.tsx",
+        "frontend/src/components/marketing/HeroSection.tsx",
+        "frontend/src/components/marketing/IntroHelperOverlay.tsx",
+        "frontend/src/components/marketing/ServicesSection.tsx",
+        "frontend/src/components/marketing/WhyChooseUsSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-12"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

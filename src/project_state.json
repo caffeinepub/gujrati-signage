@@ -1,0 +1,152 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Design and build a modern premium 3D marketing website for heritage signage company Gujrati Signage (est. 1960) emphasizing legacy, craftsmanship, trust, and innovation, with cinematic scrolling, micro-animations, 3D service cards, gallery, and a custom intro helper interaction.",
+  "architectural_notes": [
+    "Use 3D elements with subtle lighting, reflections, and soft shadows; avoid flashy effects to maintain calm luxury feel.",
+    "Plan for SEO-friendly semantic structure and performance-focused animation approach (smooth scrolling, micro-interactions)."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Premium abstract hero backdrop with soft gradients, subtle metallic sheen, and gentle vignette (hero-backdrop.dim_1920x1080.png)\n- 3D minimal signage/light-board render with soft reflections and studio lighting (hero-signage-3d.dim_1400x900.png)\n- Modern smartphone frame render on dark background with soft shadow (intro-phone.dim_900x1200.png)\n- 3D cartoon helper avatar illustration, friendly premium style, neutral colors, clean outlines, subtle shading (helper-avatar.dim_1024x1024.png)\n- Minimal metallic icon set (4 icons) with silver/neutral tones, simple geometric style (why-icons-sprite.dim_1024x1024.png)\n- Service image: building signage close-up, premium 3D/photoreal look, neutral palette (service-building-signages.dim_1200x800.png)\n- Service image: name plate premium close-up, neutral palette, soft lighting (service-name-plates.dim_1200x800.png)\n- Service image: number plate premium close-up, neutral palette, soft lighting (service-number-plates.dim_1200x800.png)\n- Service image: light board premium close-up, subtle glow, calm luxury look (service-light-boards.dim_1200x800.png)\n- Service image: custom sign board premium close-up, neutral palette, soft reflections (service-custom-sign-boards.dim_1200x800.png)\n- Service image: radium sticker premium macro/close-up, subtle sheen, neutral palette (service-radium-stickers.dim_1200x800.png)\n- Gallery image 1: premium storefront signage installation at night, tasteful lighting (gallery-01.dim_1600x1000.png)\n- Gallery image 2: premium interior nameplate signage, clean composition (gallery-02.dim_1600x1000.png)\n- Gallery image 3: premium exterior building signage in daylight, minimalist composition (gallery-03.dim_1600x1000.png)\n- Gallery image 4: premium illuminated light board detail shot, soft bokeh (gallery-04.dim_1600x1000.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-modern-premium-minimal-fully-responsive-marketing-website-for-gujrati-signage-established-1960-that-communicates-legacy-craftsmanship-trust-and-innovation-using-a-black-white-metallic-silver-soft-neutral-palette-with-subtle-accent-highlights-sophisticated-typography-and-balanced-white-space",
+      "title": "Create a modern, premium, minimal, fully responsive marketing website for “Gujrati Signage” (established 1960) that communicates legacy, craftsmanship, trust, and innovation using a black/white/metallic-silver/soft-neutral palette with subtle accent highlights, sophisticated typography, and balanced white space.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-requested-single-page-website-structure-with-cinematic-section-transitions-parallax-and-smooth-micro-animations-hero-about-us-our-services-3d-cards-work-showcase-gallery-why-choose-us-and-contact",
+      "title": "Implement the requested single-page website structure with cinematic section transitions/parallax and smooth micro-animations: Hero, About Us, Our Services (3D cards), Work Showcase/Gallery, Why Choose Us, and Contact.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-hero-section-with-headline-crafting-signage-excellence-since-1960-a-subtle-animated-3d-signage-light-board-element-a-smooth-scroll-cue-and-two-clear-ctas-contact-us-and-view-our-work",
+      "title": "Build the Hero section with headline “Crafting Signage Excellence Since 1960”, a subtle animated 3D signage/light-board element, a smooth scroll cue, and two clear CTAs: “Contact Us” and “View Our Work”.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-an-intro-interaction-at-the-start-of-the-site-a-phone-ui-pops-up-and-a-bitmoji-like-cartoon-vikrant-patel-helper-character-appears-and-asks-how-can-i-help-you-with-options-to-proceed-e-g-contact-services-view-work-while-allowing-the-user-to-dismiss-skip-the-intro",
+      "title": "Add an intro interaction at the start of the site: a phone UI pops up and a Bitmoji-like (cartoon) “Vikrant Patel” helper character appears and asks: “How can I help you?” with options to proceed (e.g., Contact, Services, View Work) while allowing the user to dismiss/skip the intro.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-about-us-section-with-a-brand-story-emphasizing-establishment-in-1960-experience-precision-and-long-term-trust-using-elegant-text-animations-and-a-clean-layout",
+      "title": "Implement the About Us section with a brand story emphasizing establishment in 1960, experience, precision, and long-term trust, using elegant text animations and a clean layout.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-our-services-as-premium-interactive-3d-service-cards-with-smooth-hover-tap-interactions-for-building-signages-name-plates-number-plates-light-boards-custom-sign-boards-radium-stickers",
+      "title": "Implement “Our Services” as premium interactive 3D service cards with smooth hover/tap interactions for: Building Signages, Name Plates, Number Plates, Light Boards, Custom Sign Boards, Radium Stickers.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-work-showcase-gallery-section-with-high-quality-visuals-provided-generated-smooth-transitions-and-immersive-scrolling-behavior-consistent-with-the-premium-look",
+      "title": "Create a Work Showcase / Gallery section with high-quality visuals (provided/generated), smooth transitions, and immersive scrolling behavior consistent with the premium look.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-why-choose-us-section-listing-over-60-years-of-expertise-custom-built-solutions-quality-materials-craftsmanship-trusted-by-generations-use-minimal-icons-with-subtle-animations",
+      "title": "Implement a “Why Choose Us” section listing: Over 60 years of expertise, Custom-built solutions, Quality materials & craftsmanship, Trusted by generations; use minimal icons with subtle animations.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-contact-section-with-a-clean-elegant-layout-that-clearly-shows-contact-details-and-provides-click-to-call-buttons-and-social-links-with-refined-hover-effects-include-phone-9828939660-9828054199-email-vikratpatell77-vp-gmail-com-instagram-https-www-instagram-com-gujratisignage-facebook-https-www-facebook-com-share-1hjagdkexw",
+      "title": "Build the Contact section with a clean, elegant layout that clearly shows contact details and provides click-to-call buttons and social links with refined hover effects. Include: Phone: 9828939660, 9828054199; Email: vikratpatell77.vp@gmail.com; Instagram: https://www.instagram.com/gujratisignage_; Facebook: https://www.facebook.com/share/1HjagdkEXW/",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-seo-friendly-structure-for-a-marketing-site-semantic-sectioning-sensible-heading-hierarchy-descriptive-page-title-description-and-accessible-image-alt-text",
+      "title": "Add SEO-friendly structure for a marketing site: semantic sectioning, sensible heading hierarchy, descriptive page title/description, and accessible image alt text.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-use-the-user-provided-uploaded-image-whatsapp-image-2026-02-09-at-14-40-31-jpeg-as-a-brand-logo-asset-in-the-site-e-g-header-and-or-hero-and-ensure-it-is-displayed-crisply-on-light-dark-backgrounds",
+      "title": "Use the user-provided uploaded image (WhatsApp Image 2026-02-09 at 14.40.31.jpeg) as a brand/logo asset in the site (e.g., header and/or hero) and ensure it is displayed crisply on light/dark backgrounds.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-and-render-generated-static-images-aligned-to-the-premium-3d-aesthetic-for-the-hero-services-and-gallery-store-them-as-static-assets-and-use-them-in-the-relevant-sections-without-routing-through-the-backend",
+      "title": "Add and render generated static images aligned to the premium 3D aesthetic for the hero, services, and gallery; store them as static assets and use them in the relevant sections without routing through the backend.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create premium minimal 3D website UI (black/white/silver neutrals) with sophisticated typography, white space, soft shadows/reflections, micro-animations, parallax and cinematic transitions",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Implement full site structure: Hero (headline + CTAs), About, Services (3D interactive cards), Work Showcase/Gallery, Why Choose Us, Contact section",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Add intro interaction: phone pop-up + Vikrant Patel Bitmoji-like character greeting 'how can I help you'",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Add Contact details and social links with click-to-call and refined hover effects (phones, email, Instagram, Facebook)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Ensure smooth performance, fully responsive layout (mobile/tablet/desktop), fast load, modern scrolling behavior, and SEO-friendly structure",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Add appropriate images/visual assets for each section (services and work showcase) aligned to premium 3D aesthetic",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Gujrati Signage",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}
